@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import useAxiosPrivate from '../hooks/useAxiosPrivate';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -8,8 +8,6 @@ const Users = () => {
 
 	const navigate = useNavigate();
 	const location = useLocation();
-
-	let effectRan = useRef(false);
 
 	useEffect(() => {
 		let isMounted = true;
