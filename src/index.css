@@ -120,3 +120,7 @@ button {
 	justify-content: flex-start;
 	align-items: flex-end;
 }
+
+li {
+	list-style-type: none;
+}
