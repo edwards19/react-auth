@@ -10,15 +10,18 @@ const useRefreshToken = () => {
 		});
 
 		setAuth((prev) => {
-			console.log('hello')
 			console.log('prev state', JSON.stringify(prev));
 			console.log(response.data.accessToken);
-			return { ...prev, accessToken: response.data.accessToken };
+			return {
+				...prev,
+				roles: response.data.roles,
+				accessToken: response.data.accessToken,
+			};
 		});
 
 		return response.data.accessToken;
 	};
 
-  return refresh;
+	return refresh;
 };
 export default useRefreshToken;
